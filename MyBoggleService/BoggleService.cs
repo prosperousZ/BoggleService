@@ -68,7 +68,7 @@ namespace Boggle
         /// <param name="result"></param>
         private void ConnectionRequested(IAsyncResult result)
         {
-            Socket s = server.EndAcceptSocket(result);
+            Socket s = server.EndAcceptSocket(result); 
             server.BeginAcceptSocket(ConnectionRequested, null);
             new ClientConnection(s);
         }
