@@ -14,7 +14,7 @@ using static System.Net.HttpStatusCode;
 namespace Boggle
 {
     /// <summary>
-    /// Class boggleService
+    /// Class boggleService 
     /// </summary>
     public class BoggleService
     {
