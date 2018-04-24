@@ -1,0 +1,11 @@
+﻿--insert into Users (UserToken, Nickname) values(1, 'one');
+--insert into Users (UserToken, Nickname) values(2, 'two');
+--insert into Users (UserToken, Nickname) values(3, 'three');
+--delete from Users where UserToken = 1;
+--delete from Users where UserToken = 2;
+--delete from Users where UserToken = 3;
+--select * from Users where UserToken = 1;
+--select * from Games where (Player1 = 1 or Player2 = 1) and StartTime = null;
+--insert into Games (Player1) values ((select UserToken from Users where UserToken = 1));
+--update Users set TimeLimit = 60 where UserToken = 3;
+update Games set Player2 = (select UserToken from Users where UserToken = 2), Board = 'abcdefghijklmnop', TimeLimit = 60, StartTime = SYSDATETIME() where GameId = 1;
